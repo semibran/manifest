@@ -1,8 +1,8 @@
 {
  "name": "manifest",
  "version": "0.0.0",
- "description": "Generates a DOM element from a corresponding virtual node",
- "keywords": ["manifest", "dom", "element", "virtual", "node", "html"],
+ "description": "Turns virtual DOM nodes into real DOM elements",
+ "keywords": ["manifest", "virtual", "node", "dom", "element", "html"],
  "files": ["index.js"],
  "license": "MIT",
  "author": "Brandon Semilla (https://github.com/semibran)",
