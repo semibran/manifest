@@ -5,10 +5,12 @@
 const manifest = require("manifest")
 
 var element = manifest({
-  tag: "div",
+  tag: "h1",
   attributes: { class: "foo" },
-  children: ["hello world"]
+  children: [ "hello world" ]
 })
+
+document.body.appendChild(element)
 ```
 
 ## see also
