@@ -1,10 +1,14 @@
 {
- "name": "manifest",
- "version": "0.0.0",
- "description": "Turns virtual DOM nodes into real DOM elements",
- "keywords": ["manifest", "virtual", "node", "dom", "element", "html"],
- "files": ["index.js"],
- "license": "MIT",
- "author": "Brandon Semilla (https://github.com/semibran)",
- "repository": "semibran/manifest"
+  "name": "@semibran/manifest",
+  "version": "1.0.0",
+  "description": "convert vdom nodes into html elements",
+  "repository": "semibran/manifest",
+  "author": "semibran",
+  "license": "MIT",
+  "main": "lib/manifest.js",
+  "keywords": [
+    "html",
+    "dom",
+    "vdom"
+  ]
 }

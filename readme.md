@@ -1,20 +1,40 @@
 # manifest
-> Turns virtual DOM nodes into real DOM elements
+> convert vdom nodes into html elements
 
 ```js
-const manifest = require("manifest")
-
-var element = manifest({
+let heading = manifest({
   tag: "h1",
   attributes: { class: "foo" },
   children: [ "hello world" ]
 })
 
-document.body.appendChild(element)
+document.body.appendChild(heading)
+console.log(document.body.outerHTML)
+// <body><h1 class="foo">hello world</h1></body>
 ```
 
-## see also
-- [`semibran/h`](https://github.com/semibran/h) - shorthand for `{ tag, attributes, children }`
+We can extend the definition of a virtual node as specified by [`hyper2/h2spec`][hyper2/h2spec] to cover primitive values. Doing so enables us to create "text nodes" out of raw strings, numbers, etc. and greatly simplifies vnode conversion. When used with primitive values, this function is practically equivalent to calling `document.createTextNode`, as in the following (impractical) example:
+
+```js
+let foo = manifest("foo")
+let bar = document.createTextNode("bar")
+document.body.appendChild(foo)
+document.body.appendChild(bar)
+console.log(document.body.outerHTML)
+// <body>foobar</body>
+```
+
+## install
+[![npm badge]][npm package]
+
+To use this module in your project, package your code together using a bundler like [`rollup`][rollup/rollup] together with [`rollup-plugin-node-resolve`][rollup/rollup-plugin-node-resolve].
 
 ## license
-[MIT](https://opensource.org/licenses/MIT) © [Brandon Semilla](https://git.io/semibran)
+MIT © [Brandon Semilla][github profile]
+
+[npm badge]:                         https://nodei.co/npm/@semibran/manifest.png?mini
+[npm package]:                       https://www.npmjs.com/package/@semibran/manifest
+[github profile]:                    https://github.com/semibran
+[hyper2/h2spec]:                     https://github.com/hyper2/h2spec
+[rollup/rollup]:                     https://github.com/rollup/rollup
+[rollup/rollup-plugin-node-resolve]: https://github.com/rollup/rollup-plugin-node-resolve
