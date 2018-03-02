@@ -1,7 +1,7 @@
 {
   "name": "@semibran/manifest",
   "version": "1.0.0",
-  "description": "convert vdom nodes into html elements",
+  "description": "convert virtual DOM nodes into HTML elements",
   "repository": "semibran/manifest",
   "author": "semibran",
   "license": "MIT",
@@ -9,6 +9,6 @@
   "keywords": [
     "html",
     "dom",
-    "vdom"
+    "virtual-dom"
   ]
 }

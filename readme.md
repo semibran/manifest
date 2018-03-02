@@ -1,5 +1,5 @@
 # manifest
-> convert vdom nodes into html elements
+> convert virtual DOM nodes into HTML elements
 
 ```js
 let heading = manifest({
@@ -24,17 +24,17 @@ console.log(document.body.outerHTML)
 // <body>foobar</body>
 ```
 
-## install
+## usage
 [![npm badge]][npm package]
 
 To use this module in your project, package your code together using a bundler like [`rollup`][rollup/rollup] together with [`rollup-plugin-node-resolve`][rollup/rollup-plugin-node-resolve].
 
-## license
-MIT © [Brandon Semilla][github profile]
+## related
+* [`semibran/patch`][semibran/patch]: efficient patch operation for HTML elements
 
 [npm badge]:                         https://nodei.co/npm/@semibran/manifest.png?mini
 [npm package]:                       https://www.npmjs.com/package/@semibran/manifest
-[github profile]:                    https://github.com/semibran
+[semibran/patch]:                    https://github.com/semibran/patch
 [hyper2/h2spec]:                     https://github.com/hyper2/h2spec
 [rollup/rollup]:                     https://github.com/rollup/rollup
 [rollup/rollup-plugin-node-resolve]: https://github.com/rollup/rollup-plugin-node-resolve
